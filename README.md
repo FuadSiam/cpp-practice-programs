@@ -14,7 +14,7 @@ I'm a beginner programmer learning C++ step by step through building small proje
 ## 📈 Progress
 - **Started**: [1/11/2025]
 - **Current Level**: Beginner
-- **Projects Completed**: 1
+- **Projects Completed**: 2
 
 ---
 *This repository documents my programming journey - from hello world to real applications!*
