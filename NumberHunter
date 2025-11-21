@@ -13,7 +13,7 @@ int main ()
    srand(time(0));
    number = (rand() % 100) +1;
 
-   cout << "-> Welcome To Random Number Generator Game <-" << endl;
+   cout << "--> Welcome To Random Number Generator Game <--" << endl;
 
    do{
     cout << "Enter a number between 1 to 100: ";
