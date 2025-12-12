@@ -28,6 +28,6 @@ int main ()
    cout << "Recomended budget for you: $" << average << endl;
    
 
-   return 0;
+   
 
 }
