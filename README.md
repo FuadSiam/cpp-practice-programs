@@ -3,7 +3,7 @@
 Welcome to my C++ programming learning journey! This repository contains all my beginner projects as I learn C++ from scratch.
 
 ## 🚀 About Me
-I'm a beginner programmer learning C++ step by step through building small projects.
+I'm a beginner programmer learning C++ step by step through building small projects and solving programming problems.
 
 ## 📖 Learning Goals
 - [ ] Master basic C++ syntax
