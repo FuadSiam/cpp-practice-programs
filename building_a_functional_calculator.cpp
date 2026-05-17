@@ -11,7 +11,7 @@ int main(){
 	cout << endl;
 	cout << endl;  // added two blank lines, bacause of having a clean visual look in the terminal
 
-	cout <<	"--- Learning how to use switch in C++ through building a basic calculator ---" << endl;
+	cout <<	"--- A Functional Calculator ---" << endl;
 	cout << endl;
 
 	double first_num;
