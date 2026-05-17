@@ -18,11 +18,11 @@ int main(){
 
 	cout <<	"--- Learning how to use switch in C++ through building a basic calculator ---" << endl;
 	cout << endl;
-	ll first_num;
+	double first_num;
 	cout << "Select the first number: ";
 	cin >> first_num;
 
-	ll second_num;
+	double second_num;
 	cout << "Select the second number: ";
 	cin >> second_num;
 
@@ -38,10 +38,10 @@ int main(){
 		cout << "Invalid operator!" << endl;
 	}*/
 
-	ll result_add = first_num + second_num;
-	ll result_subtract = first_num - second_num;
-	ll result_multiply = first_num * second_num;
-	ll result_divide = first_num / second_num;
+	double result_add = first_num + second_num;
+	double result_subtract = first_num - second_num;
+	double result_multiply = first_num * second_num;
+	double result_divide = first_num / second_num;
 
 	switch (select_operator){
 		case 1: 
