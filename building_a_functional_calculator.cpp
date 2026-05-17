@@ -5,11 +5,6 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-using ll = long long;
-
-void display(){
-
-}
 
 int main(){
 
@@ -18,11 +13,13 @@ int main(){
 
 	cout <<	"--- Learning how to use switch in C++ through building a basic calculator ---" << endl;
 	cout << endl;
+
 	double first_num;
+	double second_num;
+
 	cout << "Select the first number: ";
 	cin >> first_num;
 
-	double second_num;
 	cout << "Select the second number: ";
 	cin >> second_num;
 
@@ -34,10 +31,8 @@ int main(){
 	cout << "Select the operator (1 - 4): ";
 	cin >> select_operator;
 
-	/*if(select_operator != 1 || select_operator != 2 || select_operator != 3 || select_operator != 4){
-		cout << "Invalid operator!" << endl;
-	}*/
 
+	/* calculation */
 	double result_add = first_num + second_num;
 	double result_subtract = first_num - second_num;
 	double result_multiply = first_num * second_num;
@@ -61,9 +56,6 @@ int main(){
 		default:
 			cout << "Something went wrong!" << endl;
 	}
-
-
-
 	
 	return 0;
 }
