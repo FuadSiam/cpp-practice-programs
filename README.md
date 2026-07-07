@@ -1,20 +1,25 @@
-# My C++ Learning Journey
+*From hello world to real applications!*
 
-Welcome to my C++ programming learning journey! This repository contains all my beginner projects as I learn C++ from scratch.
+Welcome to my C++ programming learning journey!
+This repo contains all my beginner projects as I learn C++ from scratch.
 
-## 🚀 About Me
-I'm a beginner programmer learning C++ step by step through building small projects and solving programming problems.
+## About Me
+I am Fuad Hassan Siam, an undergrade computer science student. 
 
-## 📖 Learning Goals
+## Learning Goals
 - [ ] Master basic C++ syntax
-- [ ] Understand object-oriented programming
+- [ ] Problem solving and building regular small projects
 - [ ] Learn data structures and algorithms
-- [ ] Build a complete application
+- [ ] Build complete applications
 
-## 📈 Progress
+## Progress
 - **Started**: [1/11/2025]
 - **Current Level**: Beginner
-- **Projects Completed**: 3
+- **Projects Completed**: 4
 
----
-*This repository documents my programming journey - from hello world to real applications!*
+**Star projects so far**: 1. Contact_Manager.cpp
+
+
+
+
+
