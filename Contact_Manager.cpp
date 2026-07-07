@@ -133,3 +133,57 @@ void delete_contact(vector<Contact> & ref_contacts){
     } else cout << "Invalid index number" << endl;
 
 }
+
+
+/*
+    *** showing workflow examples *** 
+
+    The program begins from here
+    Do you want to continue (Y/N): y
+
+    1. Add a new contact
+    2. View all contact
+    3. Delect a contact
+    4. Exit
+    Select an option: 1
+
+    Enter name: Fuad Hassan Siam
+    Enter number: 0123456789
+    Contact successfully added
+
+    Do you want to continue (Y/N): y
+
+    1. Add a new contact
+    2. View all contact
+    3. Delect a contact
+    4. Exit
+    Select an option: 2
+
+    Your saved contacts 
+
+1. Name: Fuad Hassan Siam , Phone: 0123456789
+2. Name: Siam Hassan Fuad , Phone: 019192828385
+3. Name: Mark Dor , Phone: 9901232003
+
+    Do you want to continue (Y/N): y
+
+    1. Add a new contact
+    2. View all contact
+    3. Delect a contact
+    4. Exit
+    Select an option: 3
+
+
+ Your saved contacts 
+
+1. Name: Fuad Hassan Siam , Phone: 0123456789
+2. Name: Siam Hassan Fuad , Phone: 019192828385
+3. Name: Mark Dor , Phone: 9901232003
+Select the index number you wanna delete: 2
+Contact removed
+
+    Do you want to continue (Y/N): n
+
+    Exit
+    Program ends!
+*/
