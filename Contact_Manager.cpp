@@ -86,10 +86,18 @@ int main(){
 
 
 void display(){
-    cout << "1. Add a new contact" << endl;
-    cout << "2. View all contact" << endl;
-    cout << "3. Delect a contact" << endl;
-    cout << "4. Exit" << endl;
+
+    cout << "--------------------------------" << endl;
+    cout << "              Menu              " << endl;
+    cout << "--------------------------------" << endl;
+    cout << "[1] Add a new contact" << endl;
+    cout << "[2] View all contacts" << endl;
+    cout << "[3] Delete a contact" << endl;
+    cout << "[4] Exit" << endl;
+    // cout << "1. Add a new contact" << endl;
+    // cout << "2. View all contact" << endl;
+    // cout << "3. Delect a contact" << endl;
+    // cout << "4. Exit" << endl;
 }
 
 void add_contact(vector<Contact> & ref_contacts){
@@ -110,8 +118,10 @@ void add_contact(vector<Contact> & ref_contacts){
 
 void view_contact(vector<Contact> & ref_contacts){
 
-    cout << "\n Your saved contacts " << endl;
-    cout << endl;
+    cout << "--------------------------------" << endl;
+    cout << "Your saved contacts " << endl;
+    cout << "--------------------------------" << endl;
+
     for(int i = 0; i < ref_contacts.size(); i++){
         cout << i + 1 << ". Name: " << ref_contacts[i].name << " , Phone: " << ref_contacts[i].phone << endl; 
     }
@@ -136,7 +146,9 @@ void delete_contact(vector<Contact> & ref_contacts){
 
 
 /*
-    *** showing workflow examples *** 
+    *** showing workflow examples ***   
+    
+    ||-> ## NOTE: the UI has been updated. Initally i looked like below examples, later i added some extra layouts||
 
     The program begins from here
     Do you want to continue (Y/N): y
