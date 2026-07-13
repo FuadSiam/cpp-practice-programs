@@ -1,17 +1,22 @@
 /*
     Author: Fuad Hassan Siam
 
-This is a basic one time terminal based contact manager. Means, it doesn't have any history saving suppport yet. If you leave the terminal, it will close the program.
+This is a basic a terminal based contact manager.
+It has file saving feature.
+Your saved contacts won't get erased once you close the program.
 
 Key features: 
 1. Save contacts one by one. 
 2. View all contacts.
 3. Remove contacts at any index one by one.
+4. Contacts will remain saved after closing the program.
 
 ** Upcoming features: 
 1. remove multiple contacts at a time by selecting multiple index. 
 2. saved contacts will be shown in a better formate, probably in a box/table formate
-3. 
+
+and so on... 
+
 
 */
 
@@ -19,6 +24,7 @@ Key features:
 #include <iostream> 
 #include <vector>
 #include <string> 
+#include <fstream>
 using namespace std;
 
 struct Contact {
@@ -31,11 +37,13 @@ void display();
 void add_contact(vector<Contact> & ref_contacts);
 void view_contact(vector<Contact> & ref_contacts);
 void delete_contact(vector<Contact> & ref_contacts);
-
+void load_contact(vector<Contact> & ref_contacts);
+void save_contact(vector<Contact> & ref_contacts);
 
 int main(){
 
     vector<Contact> details_contacts;
+    load_contact(details_contacts);
 
         cout << endl;
         cout << "The program begins from here" << endl;
@@ -80,7 +88,8 @@ int main(){
     } 
     
     cout << "Program ends!" << endl;
-            
+    
+    save_contact(details_contacts);
     return 0;
 }
 
@@ -94,10 +103,7 @@ void display(){
     cout << "[2] View all contacts" << endl;
     cout << "[3] Delete a contact" << endl;
     cout << "[4] Exit" << endl;
-    // cout << "1. Add a new contact" << endl;
-    // cout << "2. View all contact" << endl;
-    // cout << "3. Delect a contact" << endl;
-    // cout << "4. Exit" << endl;
+    
 }
 
 void add_contact(vector<Contact> & ref_contacts){
@@ -142,6 +148,29 @@ void delete_contact(vector<Contact> & ref_contacts){
         cout << "Contact removed" << endl;
     } else cout << "Invalid index number" << endl;
 
+}
+
+
+void save_contact(vector <Contact> & ref_contacts){
+    ofstream save_file("contacts.txt");
+
+    for(int i = 0; i < ref_contacts.size(); i++){
+        save_file << ref_contacts[i].name << endl;
+        save_file << ref_contacts[i].phone << endl;
+    }
+
+    save_file.close();
+}
+
+void load_contact(vector<Contact> & ref_contacts){
+    ifstream load_file("contacts.txt");
+    
+    Contact temp_contact;
+    while(getline(load_file, temp_contact.name) && getline(load_file, temp_contact.phone)){
+        ref_contacts.push_back(temp_contact);
+    }
+
+    load_file.close();
 }
 
 
