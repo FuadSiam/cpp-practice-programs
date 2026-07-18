@@ -5,25 +5,25 @@ This is a basic a terminal based contact manager.
 It has file saving feature.
 Your saved contacts won't get erased once you close the program.
 
-Key features: 
-1. Save contacts one by one. 
+Key features:
+1. Save contacts one by one.
 2. View all contacts.
 3. Remove contacts at any index one by one.
 4. Contacts will remain saved after closing the program.
 
-** Upcoming features: 
-1. remove multiple contacts at a time by selecting multiple index. 
+** Upcoming features:
+1. remove multiple contacts at a time by selecting multiple index.
 2. saved contacts will be shown in a better formate, probably in a box/table formate
 
-and so on... 
+and so on...
 
 
 */
 
 
-#include <iostream> 
+#include <iostream>
 #include <vector>
-#include <string> 
+#include <string>
 #include <fstream>
 using namespace std;
 
@@ -54,7 +54,7 @@ int main(){
 
         while(choose_loop == 'Y' || choose_loop == 'y'){
             int choice = 0;
-                
+
             display();
 
             cout << "Select an option: ";
@@ -70,25 +70,25 @@ int main(){
             case 3:
                 delete_contact(details_contacts);
                 break;
-            case 4: 
+            case 4:
                 cout << "Existing the program. Goodbye";
                 break;
             default:
                 cout << "Invalid choice!" << endl;
-        } 
+        }
 
         cout << endl;
         cout << "Do you want to continue (Y/N): ";
         cin >> choose_loop;
-        
+
         if(choose_loop == 'N' || choose_loop == 'n'){
             cout << "Exit" << endl;
             break;
         }
-    } 
-    
+    }
+
     cout << "Program ends!" << endl;
-    
+
     save_contact(details_contacts);
     return 0;
 }
@@ -103,7 +103,7 @@ void display(){
     cout << "[2] View all contacts" << endl;
     cout << "[3] Delete a contact" << endl;
     cout << "[4] Exit" << endl;
-    
+
 }
 
 void add_contact(vector<Contact> & ref_contacts){
@@ -129,7 +129,7 @@ void view_contact(vector<Contact> & ref_contacts){
     cout << "--------------------------------" << endl;
 
     for(int i = 0; i < ref_contacts.size(); i++){
-        cout << i + 1 << ". Name: " << ref_contacts[i].name << " , Phone: " << ref_contacts[i].phone << endl; 
+        cout << i + 1 << ". Name: " << ref_contacts[i].name << " , Phone: " << ref_contacts[i].phone << endl;
     }
 
 }
@@ -164,7 +164,7 @@ void save_contact(vector <Contact> & ref_contacts){
 
 void load_contact(vector<Contact> & ref_contacts){
     ifstream load_file("contacts.txt");
-    
+
     Contact temp_contact;
     while(getline(load_file, temp_contact.name) && getline(load_file, temp_contact.phone)){
         ref_contacts.push_back(temp_contact);
@@ -175,8 +175,8 @@ void load_contact(vector<Contact> & ref_contacts){
 
 
 /*
-    *** showing workflow examples ***   
-    
+    *** showing workflow examples ***
+
     ||-> ## NOTE: the UI has been updated. Initally i looked like below examples, later i added some extra layouts||
 
     The program begins from here
@@ -200,7 +200,7 @@ void load_contact(vector<Contact> & ref_contacts){
     4. Exit
     Select an option: 2
 
-    Your saved contacts 
+    Your saved contacts
 
 1. Name: Fuad Hassan Siam , Phone: 0123456789
 2. Name: Siam Hassan Fuad , Phone: 019192828385
@@ -215,7 +215,7 @@ void load_contact(vector<Contact> & ref_contacts){
     Select an option: 3
 
 
- Your saved contacts 
+ Your saved contacts
 
 1. Name: Fuad Hassan Siam , Phone: 0123456789
 2. Name: Siam Hassan Fuad , Phone: 019192828385
