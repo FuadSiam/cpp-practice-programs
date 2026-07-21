@@ -83,7 +83,7 @@ int main(){
 
         if(choose_loop == 'N' || choose_loop == 'n'){
             cout << "Exit" << endl;
-            break;
+            return 0;
         }
     }
 
@@ -124,12 +124,17 @@ void add_contact(vector<Contact> & ref_contacts){
 
 void view_contact(vector<Contact> & ref_contacts){
 
+    if(ref_contacts.empty()){
+        cout << "No saved contacts yet" << endl;
+    } else{
+        
     cout << "--------------------------------" << endl;
     cout << "Your saved contacts " << endl;
     cout << "--------------------------------" << endl;
 
     for(int i = 0; i < ref_contacts.size(); i++){
         cout << i + 1 << ". Name: " << ref_contacts[i].name << " , Phone: " << ref_contacts[i].phone << endl;
+    }
     }
 
 }
